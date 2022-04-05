@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (moveWithPhy)
+      //  if (moveWithPhy)
             rigidbody.velocity = forwardSpeed*30;
     }
     Touch touch;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
                 forwardSpeed = new Vector3(Mathf.Clamp(t.deltaPosition.x, minRight, maxRight) * sensitivity * Time.deltaTime, Mathf.Clamp(t.deltaPosition.y, minHight, maxHight) * sensitivity * Time.deltaTime, forwardSpeed.z);
             }
         }
-        if(moveWithPhy)return;
-        transform.localPosition += forwardSpeed;
+        // if(moveWithPhy)return;
+        // transform.localPosition += forwardSpeed;
     }
 }

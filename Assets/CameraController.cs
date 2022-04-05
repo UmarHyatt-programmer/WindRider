@@ -17,12 +17,13 @@ public class CameraController : MonoBehaviour
     public bool isSlerp;
     void LateUpdate()
     {
+        transform.LookAt(target);
         if (isSlerp)
         {
             transform.position = Vector3.Slerp(transform.position, target.position + offset, t);
             return;
         }
-            transform.position = Vector3.Lerp(transform.position, target.position + offset, t);
+            transform.position = Vector3.Lerp(transform.position,new Vector3(transform.position.x,transform.position.y,target.position.z+offset.z), t);
     }
     public Transform _target;
     private Vector3 velocity = Vector3.zero;
