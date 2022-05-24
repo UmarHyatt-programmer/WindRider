@@ -28,7 +28,7 @@ public class WheelController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity=Vector3.forward*movingSpeed*Time.deltaTime;
         //transform.Translate(Vector3.forward*movingSpeed*Time.deltaTime);
